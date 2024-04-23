@@ -539,6 +539,12 @@ int main()
             }
             else {
               if (dirty_wbL2) {
+                // dirty write back, had to evict line and write to memory
+                r_active_time += 45;
+                r_penalty_energy += 640;
+                L1i.update_timing_energy(45, false, 0u);
+                L1d.update_timing_energy(45, false, 0u);
+                L2.update_timing_energy(45, false, 0u);
                 // Evicted line in L2 so evict in L1 as well since change has already been written back to ram
                 if (type == 2) {
                   L1i.evict(evicted);
@@ -556,7 +562,6 @@ int main()
               }
             }
           }
-          
         }
         // simulator.run();
         // L1i.dump_stats();
