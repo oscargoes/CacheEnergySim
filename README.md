@@ -23,7 +23,7 @@ that is 10.1 or higher, which would be the most likely reason that an issue occu
 In the worst case scenario that the file cannot be executed, we have provided the outtput
 generated when we ran the program on our local machines below. 
 
-
+```
 RUNNING CACHE SIM ON dinfiles/008.espresso.din
 RESULTS FOR dinfiles/008.espresso.din WITH L2 CACHE SET ASSOCIATIVITY = 2
 AVG L1-icache Accesses: 809368   AVG L1-icache Hits: 807667    AVG L1-icache Misses: 1701
@@ -639,3 +639,4 @@ Mean Total Energy:                  4.23394e+09 picojoules
 
 
 ========================================================================================================
+```
